@@ -5,130 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fauvism Inspiration Page</title>
 
-    <!-- External CSS (REQUIRED) -->
-    <link rel="stylesheet" href="/css/mystyles.css">
+    <!-- FIXED CSS PATH -->
+    <link rel="stylesheet" href="../css/mystyles.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <div class="header" id="top">
         <h1>Fauvism Inspiration</h1>
     </div>
 
-    <!-- NAVIGATION -->
     <div class="nav">
         <a href="../index.html">Resume</a>
         <a href="ai.html">Daily Luck App</a>
         <a href="#video">Go to Video</a>
     </div>
 
-    <!-- SECTION 1 -->
     <div class="section">
         <h2>Why Fauvism Matters</h2>
         <p>
             Fauvism emphasizes bold color, emotional expression, and simplified forms rather than realistic representation.
-            It prioritizes feeling over accuracy, reshaping how color is used in modern art.
+            It prioritizes feeling over accuracy.
         </p>
     </div>
 
-    <!-- SECTION 2 (NESTED LIST) -->
     <div class="section">
         <h2>Core Characteristics of Fauvism</h2>
         <ol>
             <li>Color Expression
                 <ul>
                     <li>Intense, unnatural hues</li>
-                    <li>Color used emotionally rather than realistically</li>
+                    <li>Color used emotionally</li>
                 </ul>
             </li>
             <li>Brushwork
                 <ul>
-                    <li>Loose and spontaneous strokes</li>
-                    <li>Visible painterly texture</li>
+                    <li>Loose strokes</li>
+                    <li>Visible texture</li>
                 </ul>
             </li>
             <li>Simplified Form
                 <ul>
                     <li>Reduced detail</li>
-                    <li>Focus on overall composition</li>
+                    <li>Focus on composition</li>
                 </ul>
             </li>
         </ol>
     </div>
 
-    <!-- SECTION 3 (IMAGE) -->
+    <!-- IMAGE 1 -->
     <div class="section">
         <h2>Fauvist Example Artwork</h2>
-        <img src="../assets/img/open_windown_derain.jpg" alt="Fauvism artwork example">
-        <p>An example reflecting bold color and expressive distortion typical of Fauvism.</p>
+        <img src="../assets/img/open_window_derain.jpg" alt="Fauvism artwork example">
+        <p>Bold color and expressive distortion typical of Fauvism.</p>
     </div>
-        <div class="section">
+
+    <!-- IMAGE 2 -->
+    <div class="section">
         <h2>Fauvist Example Artwork 2</h2>
-        <img src="../assets/img/andre_derain_big_ben.png" alt="Fauvism artwork example 3">
-        <p>This piece highlights simplified form and expressive brushwork typical of Fauvism.</p>
+        <img src="../assets/img/andre_derain_big_ben.png" alt="Fauvism artwork example">
+        <p>Simplified form and expressive brushwork.</p>
     </div>
-    </div>
+
+    <!-- IMAGE 3 -->
     <div class="section">
         <h2>Fauvist Example Artwork 3</h2>
-        <img src="../assets/img/trees_derain.png" alt="Fauvism artwork example 3">
-        <p>This piece highlights simplified form and expressive brushwork typical of Fauvism.</p>
+        <img src="../assets/img/trees_derain.png" alt="Fauvism artwork example">
+        <p>Use of color over realism.</p>
     </div>
 
-    <!-- SECTION 4 (VIDEO + ANCHOR TARGET ONLY) -->
+    <!-- VIDEO -->
     <div class="section" id="video">
         <h2>Fauvism Inspiration Video</h2>
-
         <iframe width="100%" height="400"
             src="https://www.youtube.com/embed/tcjJEOapNKY"
-            title="YouTube video"
-            frameborder="0"
-            allowfullscreen>
+            frameborder="0" allowfullscreen>
         </iframe>
     </div>
 
-    <!-- SECTION 5 (TABLEAU) -->
-   <div class="section">
-    <h2>Art Data Visualization</h2>
+    <!-- TABLEAU -->
+    <div class="section">
+        <h2>Art Data Visualization</h2>
 
-    <div class='tableauPlaceholder' id='viz1776118397848' style='position: relative'>
-        <noscript>
-            <a href='#'>
-                <img alt='Tableau Visualization'
-                src='https://public.tableau.com/static/images/PR/PR62TD55Q/1_rss.png' style='border: none' />
-            </a>
-        </noscript>
+        <div class='tableauPlaceholder' id='viz1776118397848'>
+            <noscript>
+                <img src='https://public.tableau.com/static/images/PR/PR62TD55Q/1_rss.png' />
+            </noscript>
 
-        <object class='tableauViz' style='display:none;' width='100%' height='500'>
-            <param name='host_url' value='https://public.tableau.com/' />
-            <param name='embed_code_version' value='3' />
-            <param name='path' value='shared/PR62TD55Q' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/PR/PR62TD55Q/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-            <param name='filter' value='publish=yes' />
-        </object>
+            <object class='tableauViz' style='display:none;' width='100%' height='500'>
+                <param name='host_url' value='https://public.tableau.com/' />
+                <param name='path' value='shared/PR62TD55Q' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+
+        <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
     </div>
 
-    <script type='text/javascript'>
-        var divElement = document.getElementById('viz1776118397848');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-</div>
-
-    <!-- FOOTER -->
     <div class="footer">
         <p>© 2026 Tay Kang</p>
         <p><a href="#top">Back to top ↑</a></p>
