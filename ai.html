@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Luck Predictor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 360px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2193b0;
+      color: white;
+      transition: 0.3s;
+      margin: 5px;
+    }
+
+    button:hover {
+      background: #176d82;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .very-good { background: #d4edda; color: #155724; }
+    .good { background: #cce5ff; color: #004085; }
+    .middle { background: #fff3cd; color: #856404; }
+    .uplifting { background: #e2e3ff; color: #383d7c; }
+
+    .extra {
+      margin-top: 10px;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🔮 Daily Luck</h1>
+  <p id="intro">Click below to predict your luck for today!</p>
+
+  <button id="mainBtn" onclick="predictLuck()">Check My Luck</button>
+  <button id="backBtn" onclick="resetPage()" style="display:none;">Go Back</button>
+
+  <div id="result" class="result" style="display:none;"></div>
+</div>
+
+<script>
+  function predictLuck() {
+    const results = [
+      {
+        type: "Very Good",
+        className: "very-good",
+        message: "✨ Everything is aligning in your favor today. Take bold steps—you’re likely to succeed in what you try!"
+      },
+      {
+        type: "Good",
+        className: "good",
+        message: "😊 A positive day ahead. Small efforts will bring nice rewards, so stay consistent and optimistic."
+      },
+      {
+        type: "Middle",
+        className: "middle",
+        message: "⚖️ Things may feel balanced today. Not too high, not too low—focus on staying steady and patient."
+      },
+      {
+        type: "Uplifting",
+        className: "uplifting",
+        message: "🌈 A gentle boost is coming your way. Even small moments today can brighten your mood—stay open to little joys."
+      }
+    ];
+
+    const foods = ["Pizza 🍕", "Sushi 🍣", "Ice Cream 🍨", "Pasta 🍝", "Tacos 🌮", "Salad 🥗", "Burger 🍔", "Ramen 🍜", "Steak 🥩", "Chocolate 🍫", "Pancakes 🥞", "Dumplings 🥟"];
+    const places = ["A cozy café ☕", "The park 🌳", "A bookstore 📚", "The beach 🌊", "A quiet room 🛋️", "A restaurant 🍽️", "A library 📖", "A mountain trail ⛰️", "A shopping mall 🛍️", "A movie theater 🎬", "A rooftop view 🌆", "A museum 🏛️"];
+    const numbers = [3, 7, 11, 21, 28, 42, 5, 9, 14, 18, 25, 33, 47, 56];
+
+    const randomIndex = Math.floor(Math.random() * results.length);
+    const selected = results[randomIndex];
+
+    const luckyFood = foods[Math.floor(Math.random() * foods.length)];
+    const luckyPlace = places[Math.floor(Math.random() * places.length)];
+    const luckyNumber = numbers[Math.floor(Math.random() * numbers.length)];
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.className = "result " + selected.className;
+
+    resultDiv.innerHTML = `
+      <h2>${selected.type}</h2>
+      <p>${selected.message}</p>
+      <div class="extra">
+        🍀 Lucky Food: ${luckyFood}<br>
+        📍 Lucky Place: ${luckyPlace}<br>
+        🔢 Lucky Number: ${luckyNumber}
+      </div>
+    `;
+
+    document.getElementById("mainBtn").style.display = "none";
+    document.getElementById("backBtn").style.display = "inline-block";
+    document.getElementById("intro").style.display = "none";
+  }
+
+  function resetPage() {
+    document.getElementById("result").style.display = "none";
+    document.getElementById("mainBtn").style.display = "inline-block";
+    document.getElementById("backBtn").style.display = "none";
+    document.getElementById("intro").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
